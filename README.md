@@ -1,4 +1,4 @@
-ImageGD
+Image Handling with GD
 =======
 
 PHP image manipulation with GD
