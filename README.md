@@ -26,10 +26,10 @@ PHP image manipulation with GD
     $m = $m->addFile($img6);
     // Merge the layers
     $m = $m->merge();
-    // Create an Image Object and return it
-    $img = $m->createImage();
     // Create an Image GD Object and return it
     $img = $m->createGD();
+    // Create an Image Object and return it
+    $img = $m->createImage();
     // Save the image
     $img->save($to_file, array('quality'=>70, 'type'=>'jpg'));
     
