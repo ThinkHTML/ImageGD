@@ -42,3 +42,17 @@ PHP image manipulation with GD
     $layers = $layers->addFile($watermark, $options);
     $img = $layers->createImage();
     $img->save($file, $options);
+    
+### Resample existing image
+
+    $img = new Image($gd, $default_options);
+    // options can be an array
+    $img->resample($options);
+    // options can be a callback
+    $img->resample(function($img, $default_options){
+        $opts = $default_options;
+        if($img->width > 200){
+            $opts['width'] = 200;
+        }
+        return $opts;
+    });
