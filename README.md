@@ -66,7 +66,8 @@ PHP image manipulation with GD
 ### ??? organized ???
 
     $rect = new ImageRect(array('w'=>$w,'h'=>$h,'color'=>$color));
-    $text = new ImageText(array('w'=>$w,'color'=>$color));
+    // text must have bounding box (horizontally at least) 
+    $text = new ImageText(array('w'=>$w,'color'=>$color,'align'=>'center')); 
     $layers->add($rect);
     $layers->add($text);
     
