@@ -18,6 +18,10 @@ PHP image manipulation with GD
 
 
     // Image Layers
+    // Set background canvas
+    $m = new ImageLayers(array('w'=>800,'h'=>600,'bg'=>'ffffff'));
+    
+    // First image used as canvas
     $m = new ImageLayers();
     $m = $m->addFile($img2);
     $m = $m->addFile($img3);
@@ -32,6 +36,7 @@ PHP image manipulation with GD
     $img = $m->createImage();
     // Save the image
     $img->save($to_file, array('quality'=>70, 'type'=>'jpg'));
+    
     
 
 ### Usage
