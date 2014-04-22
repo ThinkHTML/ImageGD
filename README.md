@@ -61,3 +61,16 @@ PHP image manipulation with GD
         }
         return $opts;
     });
+
+
+### ??? organized ???
+
+    $rect = new ImageRect(array('w'=>$w,'h'=>$h,'color'=>$color));
+    $text = new ImageText(array('w'=>$w,'color'=>$color));
+    $layers->add($rect);
+    $layers->add($text);
+    
+    //vs
+    $img->rect($w,$h,$color);
+    $img->text($text,$font,$color,$size,$line_height);
+    
